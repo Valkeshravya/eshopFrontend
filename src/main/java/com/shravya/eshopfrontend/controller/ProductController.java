@@ -43,7 +43,7 @@ public class ProductController
 	{
 		ModelAndView modelAndView=new ModelAndView("product");
 		Product product=new Product();
-		product.setProductId((int)(Math.random()*1000));
+		//product.setProductId((int)(Math.random()*1000));
 		modelAndView.addObject("pro", product);
 		  List<Category> catList=categoryDaoImpl.getCategoryList();
 	        modelAndView.addObject("catlist",catList);
@@ -59,6 +59,15 @@ public class ProductController
     {
     
         ModelAndView modelAndView=new ModelAndView("home");
+        if(pr.getProductId()==0)
+    	  {
+    		  productDaoImpl.saveProduct(pr);
+    	  }
+    	  else
+    	  {
+    		productDaoImpl.editProduct(pr);
+    	}
+      
         MultipartFile image=pr.getProductImage();
         System.out.println("Testing image------"+image);
         BufferedOutputStream bos = null;
@@ -84,7 +93,6 @@ public class ProductController
 			}
         }
         
-        productDaoImpl.saveProduct(pr);
         return modelAndView;
     }
     @RequestMapping("/showp")

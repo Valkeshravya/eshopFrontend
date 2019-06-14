@@ -22,7 +22,7 @@ ${showdata.productSupplier}<br>
 <form action="cart" >
 <input type="number" name="quan" value="0" min="1" max="5"/>
 <input type="hidden" name="pid" value="${showdata.productId}"/>
-<input type="submit" value="${buttonName}" />
+<input type="submit" value="ADDTOCART" />
 </form>
 <a href="#" style="float: right;">BUY NOW</a>
 

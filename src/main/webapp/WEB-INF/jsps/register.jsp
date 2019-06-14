@@ -24,7 +24,13 @@ USERNAME<uform:input  path="userName" class="form-control"/>
 MOBILE_NUMBER<uform:input  path="mobile" class="form-control"/>
 </div>
  <div class="form-group">
-ADDRESS<uform:input  path="address" class="form-control"/>
+SHIPPING_ADDRESS
+HOUSE_NUMBER<uform:input  path="shippingAddress.apartmentnumber" class="form-control"/><br>
+STREET<uform:input  path="shippingAddress.streetname" class="form-control"/><br>
+CITY<uform:input  path="shippingAddress.city" class="form-control"/><br>
+STATE<uform:input  path="shippingAddress.state" class="form-control"/><br>
+COUNTRY<uform:input  path="shippingAddress.country" class="form-control"/><br>
+PINCODE<uform:input  path="shippingAddress.zipcode" class="form-control"/><br>
 </div>
 
 <input type="submit" value="Submit"/>

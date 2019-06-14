@@ -28,6 +28,7 @@ CategoryDaoImpl categoryDaoImpl;
 	  Category category=new Category();
 	  ModelAndView modelAndView=new ModelAndView("category");
 	  System.out.println(categoryDaoImpl);
+	 
 	  modelAndView.addObject("cat",category);
 	  modelAndView.addObject("buttonName","Add Category");
 	  return modelAndView;
@@ -37,7 +38,17 @@ CategoryDaoImpl categoryDaoImpl;
   public ModelAndView recieveCategoryFormData(@ModelAttribute("cat") Category category)
   {
 	  ModelAndView modelAndView=new ModelAndView("home");
-	 categoryDaoImpl.saveCategory(category);
+	//categoryDaoImpl.saveCategory(category);
+
+	  if(category.getCategoryId()==0)
+	  {
+		  categoryDaoImpl.saveCategory(category);
+	  }
+	  else
+	  {
+		categoryDaoImpl.editCategory(category);
+	}
+
 	  return modelAndView;
   }
   

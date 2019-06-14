@@ -13,7 +13,7 @@
 <form action="login" method="post">
 EMAILID<input type="text" name="email" class="form-control"/>
 
-PASSWORD<input type="text" name="password" class="form-control"/>
+PASSWORD<input type="password" name="password" class="form-control"/>
 <input type="submit" value="Login"/><br>
 <h1>${message}</h1>
 </form>

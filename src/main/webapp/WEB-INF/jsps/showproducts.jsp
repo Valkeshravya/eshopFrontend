@@ -53,5 +53,6 @@ Delete
 <td><a href="delet?proId=${pro.productId}">Delete</a></td>
 </tr>
 </pform:forEach>
+</table>
 </body>
 </html>

@@ -16,6 +16,7 @@
   <a class="navbar-brand" href="userhome">EESHOP</a>
   <!-- Links -->
   <ul class="navbar-nav">
+   
        <li class="nav-item">
       <a class="nav-link" href="#">ABOUT US</a>
     </li>
@@ -37,6 +38,9 @@
  
  <li class="nav-item">
       <a class="nav-link" href="showcart">CART</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="myorder">MYORDERS</a>
     </li>
  <li class="nav-item">
       <a class="nav-link" href="registr">Register</a>

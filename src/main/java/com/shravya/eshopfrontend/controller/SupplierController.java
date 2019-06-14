@@ -33,7 +33,15 @@ public class SupplierController
 	{
 		
 	    ModelAndView modelAndView=new ModelAndView("home");
-	    supplierDaoImpl.saveSupplier(supplier);
+	    if(supplier.getSupplierId()==0)
+		  {
+			  supplierDaoImpl.saveSupplier(supplier);
+		  }
+		  else
+		  {
+			supplierDaoImpl.editSupplier(supplier);
+		}
+		
 	    
 	    return modelAndView;
 
@@ -62,6 +70,7 @@ public class SupplierController
  {
 	  ModelAndView modelAndView=new ModelAndView("supplier");
 	  Supplier supplier=supplierDaoImpl.getSupplier(supplierId);
+	 
 	  modelAndView.addObject("sup",supplier);
 	  modelAndView.addObject("buttonName","Update Supplier");
 	  return modelAndView;

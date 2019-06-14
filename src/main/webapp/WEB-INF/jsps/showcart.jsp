@@ -41,6 +41,7 @@ Edit
 <th>
 Delete
 </th>
+
 <cform:forEach items="${add}" var="cr" >
 <tr>
 <td>${cr.cartId}</td>
@@ -51,9 +52,14 @@ Delete
 <td>${cr.productSupplier}</td>
 <td>${cr.totalPrice}</td>
 <td>${cr.userName}</td>
+<cform:set var="grand" value="${grand+cr.totalPrice}"/>
 <td><a href="update?cartId=${cr.cartId}">Edit</a></td>
 <td><a href="de?cartId=${cr.cartId}">Delete</a></td>
 </tr>
 </cform:forEach>
+</table>
+<cform:out value="GradTotal=${grand}">
+</cform:out><br>
+<a href="order" style="float:left;">PlaceOrder</a>
 </body>
 </html>

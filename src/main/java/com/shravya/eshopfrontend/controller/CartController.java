@@ -31,7 +31,7 @@ public class CartController
 	   {
 		  String username=(String)session.getAttribute("un");
 		  
-		   ModelAndView modelAndView=new ModelAndView("singleproduct");
+		   ModelAndView modelAndView=new ModelAndView("userhome");
 		 int productId=Integer.parseInt(request.getParameter("pid"));
 		 Product product=productDaoImpl.getProduct(productId);
 	 	 int quantity=Integer.parseInt(request.getParameter("quan"));
@@ -74,4 +74,6 @@ public class CartController
 		  modelAndView.addObject("buttonName","Update Cart");
 		  return modelAndView;
 	  }
+	  
+	 	  
 }
